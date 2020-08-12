@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "name": "QR URL Opener",
+    "short_name": "QR URL Opener",
+    "description": "Open current site Url by scan QR code on any device",
+    "icons": {
+        "128": "icons/icon_192.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/icon.png",
+        "default_popup": "popup.html",
+        "default_title": "QR URL Opener"
+    },
+    "content_scripts": [
+        {"matches": ["<all_urls>"], "js": ["script.js"]}
+    ],
+    "permissions": [
+        "activeTab"
+    ]
+}
